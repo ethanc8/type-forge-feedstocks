@@ -25,9 +25,11 @@ about:
   license: MIT
   license_file: 
     - LICENSE.md
-  summary: Perl scripts that help in manipulating fonts, especially CJK fonts 
-    developed with AFDKO. Please note that this package requires AFDKO (which 
-    must be installed via pip) and some scripts may require fonts to be installed.
+  summary: Perl scripts for AFDKO typeface development
+  description: Perl scripts that help in manipulating fonts, especially CID-keyed
+    CJK fonts developed with AFDKO. Please note that this package requires AFDKO 
+    (which must be installed via pip) and some scripts may require fonts to be 
+    installed.
 
 extra:
   recipe-maintainers:
