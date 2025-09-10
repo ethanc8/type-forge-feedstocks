@@ -1,0 +1,34 @@
+context:
+  name: adobe-perl-scripts
+  version: 20230627
+
+package:
+  name: ${{ name }}
+  version: ${{ version }}
+
+source:
+  - url: https://github.com/adobe-type-tools/perl-scripts/archive/refs/tags/${{version}}.zip
+    sha256: a9e61e44551beb154f9848cdc29de373dd2fdf37a723701d9a37d1f6dca74651
+
+build:
+  script:
+    - chmod +x *.pl
+    - mkdir -p $PREFIX/bin
+    - mv *.pl $PREFIX/bin/
+
+requirements:
+  run:
+    - perl
+
+about:
+  homepage: https://github.com/adobe-type-tools/perl-scripts
+  license: MIT
+  license_file: 
+    - LICENSE.md
+  summary: Perl scripts that help in manipulating fonts, especially CJK fonts 
+    developed with AFDKO. Please note that this package requires AFDKO (which 
+    must be installed via pip) and some scripts may require fonts to be installed.
+
+extra:
+  recipe-maintainers:
+    - ethanc8
